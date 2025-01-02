@@ -1,7 +1,4 @@
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,7 +13,7 @@ public class Solution {
         Cryptograph cryptograph = new Cryptograph(cryptoAlphabet);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("выберите опцию: \n" +
+        System.out.print("Выберите опцию: \n" +
                 "1. Зашифровать текст data.txt.\n" +
                 "2. Расшифровать текст data.txt.\n" +
                 "3. Осуществить попытку взлома шифра.\n" +

@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.List;
 
 public class BruteForce {
@@ -17,7 +16,7 @@ public class BruteForce {
         Cryptograph cryptograph = new Cryptograph(cryptoAlphabet);
         for (int estimatedKey = 0; estimatedKey < cryptoAlphabet.size(); estimatedKey++) {
             int matchCounter = 0;
-            cryptograph.toDecrypt("encrypted.txt", estimatedKey, "decrypted.txt");
+            cryptograph.toDecrypt(encryptedFile, estimatedKey, "decrypted.txt");
             String decrypted = Files.readString(Path.of("resources/decrypted.txt"));
             for (int j = 0; j < splitVocabulary.length; j++) {
                 if (decrypted.contains(splitVocabulary[j])){
